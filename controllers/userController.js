@@ -71,11 +71,18 @@ module.exports = {
       { runValidators: true, new: true }
     )
       .then((user) =>
-        !user
-          ? res.status(404).json({ message: "No User with this id" })
-          : res.json(user)
-      )
-      .catch((err) => res.status(500).json(err));
+          User.findOneAndUpdate(
+            { _id: req.params.friendId },
+            { $set: { friends: req.params.userId } },
+            { runValidators: true, new: true }
+          )
+            .then((user) =>
+              !user
+                ? res.status(404).json({ message: "No User with this id" })
+                : res.json(user)
+            )
+            .catch((err) => res.status(500).json(err))
+      ).catch((err) => res.status(500).json(err))
   },
 
   //remove a friend
@@ -86,10 +93,16 @@ module.exports = {
       { new: true }
     )
       .then((user) => {
-        if (!user) {
-          return res.status(404).json({ message: "No user with this id!" });
-        }
-        return res.json(user);
+        User.findOneAndUpdate(
+          { _id: req.params.friendId },
+          { $pull: { friends: req.params.userId } },
+          { new: true }
+        ).then((user) => {
+          if (!user) {
+            return res.status(404).json({ message: "No user with this id!" });
+          }
+          return res.json(user);
+        })
       })
       .catch((err) => res.status(400).json(err));
   },

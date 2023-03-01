@@ -1,17 +1,17 @@
 const users = [
   {
-    username: "calebcarnett",
-    email: "caleb@gmail.com",
+    username: "Mitch",
+    email: "mitch@gmail.com",
   },
 ];
 
 const thoughts = [
   {
-    thoughtText: "I love my Cat",
-    username: "calebcarnett",
+    thoughtText: "I love my dog",
+    username: "Mitch",
     reactions: [
       {
-        reactionBody: "He's adorable",
+        reactionBody: "She's adorable",
         username: "bobby",
       },
     ],
