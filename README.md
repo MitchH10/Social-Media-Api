@@ -3,6 +3,9 @@
 ## Description
 This is a simple Api for a social media application using MongoDB with mongoose.
 
+## Video Showcase Link
+[https://drive.google.com/file/d/1q7uVGl-oOnJ4BTa1e4SORSOgMgGd8Fvi/view](https://drive.google.com/file/d/1q7uVGl-oOnJ4BTa1e4SORSOgMgGd8Fvi/view)
+
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
@@ -45,3 +48,6 @@ To test run the seed data and play around with adding your own
 For any questions contact me on: <br />
 Github: [https://github.com/MitchH10](github.com/MitchH10) or <br />
 Email: [mjh10@live.com](mjh10@live.com)
+
+## Link to repo
+[https://github.com/MitchH10/Social-Media-Api](https://github.com/MitchH10/Social-Media-Api)
